@@ -4,12 +4,13 @@
 
 <url>
   <loc>http://cpppew.github.io/icemobile/</loc>
+  <xhtml:link rel="alternate" href="terry://" />
   <lastmod>2015-08-31T01:57:18+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://cpppew.github.io/icemobile/spike.html</loc>
-  <xhtml:link rel="alternate" href="terry://" />
+  <xhtml:link rel="alternate" href="terry://spike" />
   <lastmod>2015-09-01T01:57:18+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
