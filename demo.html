@@ -19,6 +19,12 @@
           },
           openWebApp: function() {
             alert("App is not installed! go to download");
+            if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+               if (document.cookie.indexOf("iphone_redirect=false") == -1) 
+                  window.location.replace("https://itunes.apple.com/us/app/cathay-pacific/id305038764?mt=8");
+            }else {
+              window.location.replace("https://play.google.com/store/apps/details?id=com.xs2theworld.cxmobile&hl=en");
+            }
           }
         };
         app.launchApp();
