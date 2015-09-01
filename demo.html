@@ -10,26 +10,6 @@
     <meta name="keywords" content="Cpppew, AppIndex">
     <meta name="description" content="This is a spike for deeplinking by cpppew.">
     <link rel="alternate" href="android-app://terry.com.deepdeeplink/terry"/>
-    <script>
-      (function() {
-        var app = {
-          launchApp: function() {
-            window.location.replace("terry://demo");
-            this.timer = setTimeout(this.openWebApp, 1000);
-          },
-          openWebApp: function() {
-            alert("App is not installed! go to download");
-            if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-               if (document.cookie.indexOf("iphone_redirect=false") == -1) 
-                  window.location.replace("https://itunes.apple.com/us/app/cathay-pacific/id305038764?mt=8");
-            }else {
-              window.location.replace("https://play.google.com/store/apps/details?id=com.xs2theworld.cxmobile&hl=en");
-            }
-          }
-        };
-        app.launchApp();
-      })();
-    </script>
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <style>
@@ -106,5 +86,17 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      (function() {
+        var app = {
+          launchApp: function() {
+            window.location.replace("terry://demo");
+          }
+        };
+        app.launchApp();
+      })();
+    </script>
+
   </body>
 </html>
