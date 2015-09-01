@@ -10,10 +10,19 @@
     <meta name="keywords" content="Cpppew, AppIndex">
     <meta name="description" content="This is a spike for deeplinking by cpppew.">
     <link rel="alternate" href="android-app://terry.com.deepdeeplink/terry"/>
-    <script>// <![CDATA[
-      if (screen.width <= 800) {
-        document.location = "terry://demo"
-      }// ]]>
+    <script>
+      (function() {
+        var app = {
+          launchApp: function() {
+            window.location.replace("terry://demo");
+            this.timer = setTimeout(this.openWebApp, 1000);
+          },
+          openWebApp: function() {
+            alert("App is not installed! go to download");
+          }
+        };
+        app.launchApp();
+      })();
     </script>
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
